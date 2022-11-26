@@ -50,11 +50,6 @@
 }
 
 .portfolio {
-    @include mobile-breakpoint {
-        max-width: 450px;
-        margin: 0 auto;
-    }
-
     @include tablet-breakpoint {
         max-width: 738px ;
         margin: 0 auto;
@@ -75,6 +70,14 @@
 
     &__item {
         background-color: var(--card-bg);
+            @include mobile-breakpoint {
+                max-width: 450px;
+                margin: 0 auto;
+
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+            }
 
         @include tablet-breakpoint {
             width: calc(100%/2 - 30px/2);
