@@ -14,19 +14,13 @@
 </head>
 <body>
     <header class="header">
-        <div class="container ">
-            <nav class="container-flex">
+        <div class="container container-flex">
+            <nav>
                 <ul class="nav">
-                    <li class="nav__logo-item">
+                    <li class="nav__item--logo">
                         <a class="logo-header" href="./index.html" lang="en">
                             Web<span class="logo-header__color">Studio</span>
                         </a>
-                        <button type="menu" class="menu">
-                            <svg width="40" height="40">
-                                <use href="./images/icons.svg#icon-menu">
-                                </use>
-                            </svg>
-                        </button>
                     </li>
                     <li class="nav__item">
                         <a class="header__link nav__link curent" href="./index.html">
@@ -65,6 +59,70 @@
                     </a>
                 </li>
             </ul>
+            <div class="burger js-menu-container"  id="mobile-menu" >
+                <ul class="burger__nav">
+                    <li class="burger__item">
+                        <a class="header__link nav__link" href="./index.html">
+                            Студія
+                        </a>
+                    </li>
+                    <li class="burger__item">
+                        <a class="header__link nav__link" href="./portfolio.html">
+                            Портфоліо
+                        </a>
+                    </li>
+                    <li class="burger__item">
+                        <a class="header__link nav__link" href="#footer__contacts">
+                            Контакти
+                        </a>
+                    </li>
+                </ul>
+                <ul class="burger__contacts">
+                    <li class="burger__item">
+                        <a class="header__link heder-contacts__link" href="tel:+380961111111">
+            
+                            +38 096 111 11 11
+                        </a>
+                    </li>
+                    <li class="burger__item">
+                        <a class="header__link heder-contacts__link heder-contacts__link--small" href="mailto:info@devstudio.com">
+                            info@devstudio.com
+                        </a>
+                    </li>
+                </ul>
+                <ul class="burger__socials">
+                    <li class="burger__item--social">
+                        <a href="#" class="burger__social header__link">
+                            Instagram
+                        </a>
+                    </li>
+                    <li class="burger__item--social">
+                        <a href="#" class="burger__social header__link">
+                            Twitter
+                        </a>
+                    </li>
+                    <li class="burger__item--social">
+                        <a href="#" class="burger__social header__link">
+                            Facebook
+                        </a>
+                    </li>
+                    <li class="burger__item--social">
+                        <a href="#" class="burger__social header__link">
+                            Linkedin
+                        </a>
+                    </li>
+                </ul>
+                <button class="close-button js-close-menu" type="button" >
+                    <svg class="icon-color" width="18" height="18">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+            </div>
+            <button class="burger__button js-open-menu" type="menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="icon-color burger-menu--size" width="24" height="16">
+                    <use href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
         </div>
     </header>
     <main>
@@ -137,12 +195,12 @@
                 </ul>
             </div>
         </section>
-        <section class=" section we-do">
+        <section class=" section section-we-do">
            <div class="container">
             <h2 class="title section-title">
                 Чим ми займаємося
             </h2>
-            <ul class="flex-container">
+            <ul class="we-do">
                 <li class="we-do__item">
                     <img src="./images/we-do1.jpg" alt="Кодування" width="370">
                     <div class="we-do__descr">
@@ -171,7 +229,12 @@
                 </h2>
                 <ul class="team__items">
                     <li class="team-card">
-                        <img src="./images/product.jpg" alt="Дизайнер продукту" >
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="./images/product480.jpg 1.x, ./images/product480@2x.jpg 2x">
+                            <source media="(min-width: 768px)" srcset="./images/product768.jpg 1.x, ./images/product768@2x.jpg 2x">
+                            <source media="(min-width: 1200px)" srcset="./images/product1200.jpg 1.x, ./images/product1200@2x.jpg 2x">
+                            <img src="./images/product1200.jpg" alt="Дизайнер продукту">
+                        </picture>
                         <div class="team-card__info">
                             <h3 class="title name">
                                 Ігор Дем'яненко
@@ -212,7 +275,13 @@
                         </div>
                     </li>
                     <li class="team-card">
-                        <img src="./images/frontend.jpg" alt="Розробник інтерфейсу" >
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="./images/frontend480.jpg 1.x, ./images/frontend480@2x.jpg 2x">
+                            <source media="(min-width: 768px)" srcset="./images/frontend768.jpg 1.x, ./images/frontend768@2x.jpg 2x">
+                            <source media="(min-width: 1200px)" srcset="./images/frontend1200.jpg 1.x, ./images/frontend1200@2x.jpg 2x">
+                            <img src="./images/frontend1200.jpg" alt="Розробник інтерфейсу">
+                        </picture>
+                        
                         <div class="team-card__info">
                             <h3 class="title name">
                                 Ольга Рєпіна
@@ -253,7 +322,13 @@
                         </div>
                     </li>
                     <li class="team-card">
-                        <img src="./images/marketing.jpg" alt="Працівник маркетингу" >
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="./marketing480.jpg 1.x, ./images/marketing480@2x.jpg 2x">
+                            <source media="(min-width: 768px)" srcset="./images/marketing768.jpg 1.x, ./images/marketing768@2x.jpg 2x">
+                            <source media="(min-width: 1200px)" srcset="./images/marketing1200.jpg 1.x, ./images/marketing1200@2x.jpg 2x">
+                            <img src="./images/marketing1200.jpg" alt="Працівник маркетингу">
+                        </picture>
+                        
                         <div class="team-card__info">
                             <h3 class="title name">
                                 Микола Тарасов
@@ -294,7 +369,13 @@
                         </div>
                     </li>
                     <li class="team-card">
-                        <img src="./images/ui.jpg" alt="Дизайнер інтерфейсу користувача" >
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="./ui480.jpg 1.x, ./images/ui480@2x.jpg 2x">
+                            <source media="(min-width: 768px)" srcset="./images/ui768.jpg 1.x, ./images/ui768@2x.jpg 2x">
+                            <source media="(min-width: 1200px)" srcset="./images/ui1200.jpg 1.x, ./images/ui1200@2x.jpg 2x">
+                            <img src="./images/ui1200.jpg" alt="Дизайнер інтерфейсу користувача">
+                        </picture>
+                        
                         <div class="team-card__info">
                             <h3 class="title name">
                                 Михайло Єрмаков
@@ -334,7 +415,7 @@
                             </ul>
                         </div>
                     </li>
-                    </ul>
+                </ul>
             </div>
         </section>
         <section class="section partners-section">
@@ -387,92 +468,92 @@
                     </li>
                 </ul>
             </div>
-
         </section>
     </main>
     <footer class="footer">
-       <div class="container">
-        <div>
-            <div class="footer__tablet">
-                <address class="contacts">
-                    <a class="footer-logo" href="./index.html" lang="en">
-                        Web<span class="footer-logo__color">Studio</span>
-                    </a>
-                    <ul id="contacts">
-                        <li class="footer__contacts">
-                            <a class="address footer__link" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank"
-                                rel="noopener noreferrer nofollow">
-                                м. Київ, пр-т Лесі Українки, 26
-                            </a>
-                        </li>
-                        <li class="footer__contacts">
-                            <a class="footer__link" href="mailto:info@devstudio.com">
-                                info@devstudio.com
-                            </a>
-                        </li>
-                        <li class="footer__contacts">
-                            <a class="footer__link" href="tel:+380961111111">
-                                +38 096 111 11 11
-                            </a>
-                        </li>
-                    </ul>
-                </address>
-                <div class="join-container">
+        <div class="container">
+            <div class="footer--flex">
+                <div class="footer__tablet">
+                    <address class="contacts">
+                        <a class="footer-logo" href="./index.html" lang="en">
+                            Web<span class="footer-logo__color">Studio</span>
+                        </a>
+                        <ul id="contacts">
+                            <li class="footer__contacts">
+                                <a class="address footer__link" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank"
+                                    rel="noopener noreferrer nofollow">
+                                    м. Київ, пр-т Лесі Українки, 26
+                                </a>
+                            </li>
+                            <li class="footer__contacts">
+                                <a class="footer__link" href="mailto:info@devstudio.com">
+                                    info@devstudio.com
+                                </a>
+                            </li>
+                            <li class="footer__contacts">
+                                <a class="footer__link" href="tel:+380961111111">
+                                    +38 096 111 11 11
+                                </a>
+                            </li>
+                        </ul>
+                    </address>
+                    <div class="join-container">
+                        <h2 class="white-title">
+                            Приєднуйтесь
+                        </h2>
+                        <ul class="join">
+                            <li>
+                                <a href="#" class="join-links">
+                                    <svg class="icon-color" width="20" height="20">
+                                        <use href="./images/icons.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="join-links">
+                                    <svg width="20" height="20">
+                                        <use class="icon-color" href="./images/icons.svg#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="join-links">
+                                    <svg class="icon-color" width="20" height="20">
+                                        <use href="./images/icons.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="join-links">
+                                    <svg class="icon-color" width="20" height="20">
+                                        <use href="./images/icons.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="subscribe-container">
                     <h2 class="white-title">
-                        Приєднуйтесь
+                        Підпишіться на розсилку
                     </h2>
-                    <ul class="flex-container">
-                        <li>
-                            <a href="#" class="join-links">
-                                <svg class="icon-color" width="20" height="20">
-                                    <use href="./images/icons.svg#icon-instagram"></use>
+                    <form class="subscribe-container__form">
+                        <label for="email">
+                            <input type="email" name="email" class="subscribe-container__input" required
+                                placeholder="E-mail">
+                        </label>
+                        <button type="submit" class="button subscribe-container__button ">
+                            Підписатися
+                            <span class="icon-send">
+                                <svg class="icon-color" width="24" height="24">
+                                    <use href="./images/icons.svg#icon-send"></use>
                                 </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="join-links">
-                                <svg width="20" height="20">
-                                    <use class="icon-color" href="./images/icons.svg#icon-twitter"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="join-links">
-                                <svg class="icon-color" width="20" height="20">
-                                    <use href="./images/icons.svg#icon-facebook"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="join-links">
-                                <svg class="icon-color" width="20" height="20">
-                                    <use href="./images/icons.svg#icon-linkedin"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
+                            </span>
+                        </button>
+                    </form>
                 </div>
             </div>
-            <div class="subscribe-container">
-                <h2 class="white-title">
-                    Підпишіться на розсилку
-                </h2>
-                <form class="subscribe-container__form">
-                    <label for="email" >
-                        <input type="email" name="email" class="subscribe-container__input" required placeholder="E-mail">
-                    </label>
-                    <button type="submit" class="button subscribe-container__button ">
-                        Підписатися 
-                        <span class="icon-send">
-                        <svg class="icon-color" width="24" height="24">
-                            <use href="./images/icons.svg#icon-send"></use>
-                        </svg>
-                    </span>
-                   </button>
-                </form>
-            </div>
         </div>
-       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
@@ -527,6 +608,10 @@
             </form>
         </div>
     </div>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 </html>

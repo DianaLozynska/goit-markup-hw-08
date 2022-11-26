@@ -1,33 +1,83 @@
 .hero {
-
-    @media screen and (max-width: 768px) {
-        
-    }
-
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/hero-img768.jpg);
     background-color: var(--footer-bg);
-    padding: 118px 0;
-    text-align: center;
-    height: 400px;
-    min-width: 320px;
     margin: 0 auto;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    text-align: center;
+    min-width: 320px;
 
+    @include mobile-and-tablet-breakpoint {
+        padding: 118px 0;
+        height: 400px;
+    }
+
+    @include mobile-breakpoint {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-img480.jpg);
+    }
+
+    @media not all,
+    screen and (max-width: 767px) and (min-resolution: 192dpi),
+    screen and (max-width: 767px) and (min-resolution: 2dppx){
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-img480@2x.jpg);
+    }
+
+    @include tablet-breakpoint {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-img768.jpg);
+    }
+
+    @media not all,
+    screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi),
+    screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-img768@2x.jpg);
+    }
+
+    @include desktop-breakpoint {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-img.jpg);
+        padding: 200px;
+        max-width: 1600px;
+    }
+
+    @media not all,
+    screen and (min-width: 1200px) and (min-resolution: 192dpi),
+    screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+             url(../images/hero-img@2x.jpg);
+            background-size: cover;
+        }
 
     &__title {
         color: var(--main-white);
         text-transform: uppercase;
-        font-weight: 900;
-        letter-spacing: 0.06em;
         margin: 0 auto 30px;
-        
+        letter-spacing: 0.06em;
+        font-weight: 900;
+        min-width: 320px;
+        line-height: 1.36;
+
+        @include desktop-breakpoint{
+            font-size: 44px;
+            width: 696px;
+        }
+
+        @include mobile-and-tablet-breakpoint {
+            font-size: 26px;
+            max-width: 360px;
+        }
         
     }
 
     &__button {
         min-width: 200px;
+
+        @include desktop-breakpoint {
+            min-width: 216px;
+        }
     }
 }
 

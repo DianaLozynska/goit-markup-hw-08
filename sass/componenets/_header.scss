@@ -1,4 +1,4 @@
-.header{
+ .header{
     border-bottom: 1px solid #ECECEC;
 
     &__link {
@@ -15,65 +15,70 @@
         &:focus {
             color: var(--accent-color);
         }
-    }   
+    } 
+    
 }
 
 .nav {
     display: flex;
     align-items: center;
-    width: 100%;
 
-    &__logo-item {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        align-items: center;
-    }
-
-    &__item {
-        @media screen and (max-width:767px) {
-            display: none;
+    &__item:not(:last-child),
+    &__item:not(:first-child) {
+        @include tablet-and-desktop-breakpoint {
+            margin-right: 50px;
         }
-    }
-
-    &__item:not(:last-child) {
-        margin-right: 50px;
     }
 
     &__link {
         color: var(--title-color);
+        @include mobile-breakpoint {
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 1.18;
+            padding: 16px 0;
+        }
     }
-}
 
-.menu {
-    width: 40px;
-    height: 40px;
-    display: block;
-    padding: 0;
-    background-color: transparent;
-    border: none;
-    margin: 0;
-    margin-left: auto;
-    cursor: pointer;
-
-    @media screen and (min-width: 768px) {
-        display: none;
-    }
+    &__item {
+        &:not(:first-child) {
+            @include mobile-breakpoint {
+                display: none;
+            }
+        }
+        &--logo {
+            @include mobile-breakpoint {
+                margin: 0;
+            }
     
+            @include tablet-and-desktop-breakpoint {
+                margin-right: 94px;
+            }
+    
+        }
+    }
+
 }
 
 .logo-header {
-    display: block;
-    justify-content: center;
-    align-items: center;
     font-family: 'Raleway';
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
     color: var(--accent-color);
     text-decoration: none;
-    padding: 16px 0;
+    font-weight: 700;
+    display: block;
+
+    @include mobile-breakpoint {
+        font-size: 24px;
+        line-height: 1.19;
+        padding: 16px 0;
+    }
+
+    @include tablet-and-desktop-breakpoint {
+        
+        font-size: 26px;
+        line-height: 1.19;
+        padding: 24px 0;
+    }
 
     .logo-header__color {
         color: #000000;
@@ -84,48 +89,62 @@
     color: var(--accent-color);
     position: relative;
     &::after {
-            content: "";
-            position: absolute;
-            display: block;
-            bottom: -1px;
-            width: 100%;
-            height: 4px;
-            border-radius: 2px;
-            background-color: var(--accent-color);
-        }
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: -1px;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: var(--accent-color);
+    }
 }
 
-
-
 .heder-contacts {
-    @media screen and (max-width:767px) {
-        display: none;
+    margin-left: auto;
+
+    @include desktop-breakpoint{
+        display: flex;
+        align-items: center;
     }
+    
 
     &__link {
-        display: flex;
         color: inherit;
-        align-items: center;
-        padding: 0;
+
+        @include mobile-breakpoint {
+            font-weight: 500;
+            font-size: 34px;
+            line-height: 1.18;
+            padding: 16px 0;
+
+            &--small{
+                    font-size: 28px;
+                }
+        }
+
+        @include tablet-and-desktop-breakpoint {
+            align-items: center;
+            display: flex;
+            padding: 0;
+        }
     }
 
-    @media screen and (min-width:768px) and (max-width: 1199px) {
-        margin-left: auto;
-        &__item+&__item {
+    &__item{
+        @include mobile-breakpoint {
+            display: none;
+        }
+    }
+
+    &__item+&__item {
+        @include tablet-breakpoint {
             margin-top: 10px;
         }
-    }
 
-    @media screen and (min-width:1200px) {
-        display: flex;
-        margin-left: auto;
-    
-        &__item+&__item {
+        @include desktop-breakpoint {
             margin-left: 50px;
         }
-    
-    }
-    
+    }  
 }
 
 .icon-envelope {
@@ -137,3 +156,5 @@
     fill: currentColor;
     margin-right: 10px;
 }
+
+
