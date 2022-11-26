@@ -1,0 +1,37 @@
+.hero {
+
+    @media screen and (max-width: 768px) {
+        
+    }
+
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-img768.jpg);
+    background-color: var(--footer-bg);
+    padding: 118px 0;
+    text-align: center;
+    height: 400px;
+    min-width: 320px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+    &__title {
+        color: var(--main-white);
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: 0.06em;
+        margin: 0 auto 30px;
+        
+        
+    }
+
+    &__button {
+        min-width: 200px;
+    }
+}
+
+
+
+
+

@@ -1,0 +1,29 @@
+.we-do {
+
+    @media screen and (max-width: 1200px) {
+        display: none;
+    }
+
+    padding-top: 0;
+
+    &__item {
+            width: calc(100%/3 - 30px/3*2);
+            text-align: center;
+            position: relative;
+    }
+
+    &__descr {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: rgba(47, 48, 58, 0.8);
+        height: 70px;
+        padding: 10px;
+        position: absolute;
+        bottom: 0;
+    }         
+}
+
+
+

@@ -1,0 +1,16 @@
+%flex-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+%flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+%flex-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

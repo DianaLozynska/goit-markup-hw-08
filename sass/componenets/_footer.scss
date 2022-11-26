@@ -1,0 +1,149 @@
+.footer {
+    background-color: var(--footer-bg);
+    padding: 60px 0;
+    text-align: center;
+
+
+    &--flex {
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: inherit;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
+    }
+
+    &__tablet {
+        @media screen and (min-width:768px) and (max-width: 1199px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 604px;
+            margin: 0 auto;
+        }
+    }
+
+    &__contacts:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    &__contacts:first-child {
+        margin-top: 20px;
+    }
+}
+
+.footer-logo {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: var(--accent-color);
+    text-decoration: none;
+
+    &__color {
+        color: var(--main-white);
+        text-decoration: none;
+        margin-bottom: 20px;
+    }
+}
+
+.contacts {
+    font-size: 14px;
+    line-height: 1.71;
+    color: var(--sub-white);
+    font-style: normal;
+}
+
+.address {
+    color: var(--main-white);
+    width: 232px;
+    
+}
+
+.join-container {
+    width: 206px;
+
+    @media screen and (max-width:767px) {
+        margin: 0 auto;
+        margin-top: 60px;
+    }
+
+    @media screen and (min-width:768px) and (max-width: 1199px) {
+        margin-top: 0;
+    }
+}
+
+.join-links {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--main-white);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 20px;
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+
+    }
+}
+
+.subscribe-container {
+    margin: 60px auto 0;
+
+    &__form {
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 16px;
+        line-height: 1.25;
+        margin-top: 20px;
+    }
+
+    &__field {
+        position: relative;
+    }
+
+    &__input {
+        width: 100%;
+        max-width: 450px;
+        height: 50px;
+        background-color: var(--footer-bg);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        padding: 15px 16px;
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 16px;
+        line-height: 1.25;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 200px;
+        margin: 20px auto 0;
+
+        &__button:hover,
+        &__button:focus {
+            background-color: var(--hero-button-hover);
+        }
+    }
+}
+
+.icon-send {
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    color: var(--main-white);
+    margin-left: 10px;
+}
