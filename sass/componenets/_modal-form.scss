@@ -150,6 +150,9 @@
     margin: auto;
     margin-bottom: 30px;
     font-size: 14px;
+    @include mobile-breakpoint {
+            font-size: 12px;
+        }
 }
 
 .terms-link {

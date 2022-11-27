@@ -1200,6 +1200,11 @@ img {
   margin-bottom: 30px;
   font-size: 14px;
 }
+@media screen and (max-width: 767px) {
+  .checkbox-label {
+    font-size: 12px;
+  }
+}
 
 .terms-link {
   color: var(--accent-color);
