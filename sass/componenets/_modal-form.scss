@@ -150,7 +150,7 @@
     margin: auto;
     margin-bottom: 30px;
     font-size: 14px;
-    @include mobile-breakpoint {
+    @include mobile-and-tablet-breakpoint {
             font-size: 12px;
         }
 }

@@ -1200,7 +1200,7 @@ img {
   margin-bottom: 30px;
   font-size: 14px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .checkbox-label {
     font-size: 12px;
   }
