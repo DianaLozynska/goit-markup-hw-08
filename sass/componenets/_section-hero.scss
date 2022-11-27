@@ -8,7 +8,7 @@
     min-width: 320px;
 
     @include mobile-and-tablet-breakpoint {
-        padding: 118px 0;
+        padding: 118px 10px;
         height: 400px;
     }
 
@@ -57,7 +57,7 @@
         margin: 0 auto 30px;
         letter-spacing: 0.06em;
         font-weight: 900;
-        min-width: 320px;
+        min-width: 310px;
         line-height: 1.36;
 
         @include desktop-breakpoint{
@@ -66,8 +66,8 @@
         }
 
         @include mobile-and-tablet-breakpoint {
-            font-size: 26px;
-            max-width: 360px;
+            font-size: 24px;
+            max-width: 320px;
         }
         
     }
