@@ -59,6 +59,11 @@
         font-size: 18px;
         padding: 0 10px;
         margin: 5px 0;
+
+        &:hover,
+        &:focus {
+            color: var(--hero-btn-hover);
+        }
     }
 
     &__item--social:not(:last-child) {
