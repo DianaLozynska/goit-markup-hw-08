@@ -60,6 +60,9 @@
         line-height: 2;
         letter-spacing: 0.06em;
         margin-bottom: 4px;
+        @include tablet-breakpoint {
+            font-size: 16px;
+        }
     }
 
     &__item {
