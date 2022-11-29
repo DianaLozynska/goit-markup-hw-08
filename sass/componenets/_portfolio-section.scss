@@ -3,26 +3,19 @@
 }
 
 .filter {
-    padding-bottom: 50px;
+    margin-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 8px;
 
     @include mobile-breakpoint {
         justify-content: flex-start;
+        margin-bottom: 30px;
     }
 
-    &__item {
-        margin-bottom: 15px;
-        &:not(:last-child) {
-            margin-right: 8px;
-        }
-        @include mobile-breakpoint {
-            &:nth-child(3) {
-                margin-right: 20px;
-            }
-            
-        }
+    &__item:nth-child(3) {
+        margin-right: 20px;
     }
 }
 
@@ -72,8 +65,6 @@
     &__item {
         background-color: var(--card-bg);
             @include mobile-breakpoint {
-                max-width: 450px;
-                margin: 0 auto;
 
                 &:not(:last-child) {
                     margin-bottom: 30px;
@@ -143,9 +134,12 @@
     }
 
     &--active {
-        display: flex;
-        align-items: center;
+        @media screen and (min-width:460px) {
+            display: flex;
+            align-items: center;
+        }
         position: absolute;
+        overflow-y: scroll;
         top: 0;
         left: 0;
         width: 100%;
